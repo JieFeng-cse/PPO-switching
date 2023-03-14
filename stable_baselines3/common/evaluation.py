@@ -96,7 +96,8 @@ def evaluate_policy(
                 done = dones[i]
                 info = infos[i]
                 episode_starts[i] = done
-
+                if current_lengths>1000:
+                    dones[i]=True
                 if callback is not None:
                     callback(locals(), globals())
 

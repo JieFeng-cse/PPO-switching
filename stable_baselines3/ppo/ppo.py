@@ -78,7 +78,7 @@ class PPO(OnPolicyAlgorithm):
         env: Union[GymEnv, str],
         learning_rate: Union[float, Schedule] = 3e-4,
         n_steps: int = 2048,
-        batch_size: int = 64,
+        batch_size: int = 256,
         n_epochs: int = 10,
         gamma: float = 0.99,
         gae_lambda: float = 0.95,
